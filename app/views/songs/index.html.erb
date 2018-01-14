@@ -1,0 +1,8 @@
+<h1>Look at all these awesome Songs:</h1>
+  <% @songs.each do |song| %>
+  <tbody>
+    <tr>
+      <h3><%= link_to song.title, song_path(song) %></h3>
+    </tr>
+  </tbody>
+  <% end %>

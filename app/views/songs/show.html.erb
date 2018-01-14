@@ -1,0 +1,17 @@
+<h1><%= @song.title %></h1>
+  <ul>
+    <li>Artist Name: <%= @song.artist_name %></li>
+    <li>Genre: <%= @song.genre %></li>
+    <li>Released: <%= @song.released.to_s.capitalize! %></li>
+    <li>Release Year:
+      <% if @song.released == false %>
+        This song has no current release date
+      <% else %>
+        <%= @song.release_year %>
+      <% end %>
+    </li>
+  </ul>
+
+<p><%= link_to "Click here to edit #{@song.title}", edit_song_path(@song.id)  %></p>
+<p>Click here to Delete <%= @song.title %>: <%= link_to "Delete", @song, method: :delete, data: {confirm: "Are You Sure?"} %></p>
+<p><%= link_to "Click here to go back to all songs", songs_path  %></p>
