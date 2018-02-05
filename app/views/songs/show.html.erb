@@ -1,0 +1,19 @@
+<h1><%= @song.title %></h1>
+
+    <br>
+    Realised: <%= @song.released %>
+    <br>
+    <br>
+    Realised Year: <%= @song.release_year %>
+    <br>
+    <br>
+    Artist: <%= @song.artist_name %>
+    <br>
+    <br>
+    Genre: <%= @song.genre %>
+    <br>
+    <br>
+<%= link_to "Edit your Song", edit_song_path %>
+</br>
+</br>
+<%= link_to "Back To All Songs", songs_path %>
